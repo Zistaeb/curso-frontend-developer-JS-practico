@@ -5,6 +5,7 @@ const menuHamburguerIcon = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const cardsContainer = document.querySelector(".cards-container");
+const productDetailContainer = document.querySelector("#productDetail");
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 menuHamburguerIcon.addEventListener("click", toggleMobileMenu);
@@ -35,6 +36,10 @@ function toggleCarritoAside() {
 
 }
 
+function openProductDetailAside() {
+    productDetailContainer.classList.remove("inactive");
+}
+
 const productList = [];
 
 productList.push({
@@ -46,13 +51,13 @@ productList.push({
 productList.push({
     name: "Screen",
     price: 220,
-    image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "./img/pantalla.png",
 });
 
 productList.push({
     name: "Computer",
     price: 620,
-    image: "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "./img/computadora.png",
 });
 
 /*<div class="product-card">
@@ -76,6 +81,7 @@ function renderProducts (arr) {
         /// product = {name, price, image} -> product.image
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
+        productImg.addEventListener('click', openProductDetailAside)
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
