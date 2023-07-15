@@ -8,6 +8,7 @@ app.get('*', (req, res) => {
     res.sendFile('index.html', { root: 'public' });
 });
 
-app.listen(3000, () => {
-    console.log('Servidor corriendo en el puerto 3000');
+const port = 5000;
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
 });
