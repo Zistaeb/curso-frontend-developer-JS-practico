@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Zistaeb/curso-frontend-developer-JS-practico/issues"
   },
-  "homepage": "https://github.com/Zistaeb/curso-frontend-developer-JS-practico#readme"
+  "homepage": "https://github.com/Zistaeb/curso-frontend-developer-JS-practico#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
