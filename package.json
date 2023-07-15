@@ -1,0 +1,23 @@
+{
+  "name": "curso-js",
+  "version": "1.0.0",
+  "description": "Curso de Javascript practico",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zistaeb/curso-frontend-developer-JS-practico.git"
+  },
+  "keywords": [
+    "curso",
+    "javascript"
+  ],
+  "author": "Beatriz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zistaeb/curso-frontend-developer-JS-practico/issues"
+  },
+  "homepage": "https://github.com/Zistaeb/curso-frontend-developer-JS-practico#readme"
+}
