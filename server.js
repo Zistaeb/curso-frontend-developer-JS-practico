@@ -1,1 +1,13 @@
-console.log('Hola betty')
+import express from 'express';
+
+const app = express();
+
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+    res.sendFile('index.html', { root: 'public' });
+});
+
+app.listen(3000, () => {
+    console.log('Servidor corriendo en el puerto 3000');
+});
