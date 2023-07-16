@@ -46,9 +46,14 @@ function toggleCarritoAside() {
 
 };
 
-function openProductDetailAside() {
-    shoppingCartContainer.classList.add('inactive');
-    productDetailContainer.classList.remove("inactive");
+function openProductDetailAside(product) {
+    return () => {
+        document.getElementById('details-img').setAttribute('src', product.image);
+        document.getElementById('details-price').innerText = product.price;
+        document.getElementById('details-name').innerText = product.name;
+        shoppingCartContainer.classList.add('inactive');
+        productDetailContainer.classList.remove("inactive");
+    };
 };
 
 function closeProductDetailAside() {
@@ -96,7 +101,7 @@ function renderProducts (arr) {
         /// product = {name, price, image} -> product.image
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
-        productImg.addEventListener('click', openProductDetailAside)
+        productImg.addEventListener('click', openProductDetailAside(product));
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
